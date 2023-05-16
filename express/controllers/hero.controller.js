@@ -1,7 +1,10 @@
 const heros = require('../models/hero.model')
+const path = require('path')
 
 function getHeros(req, res){
-    res.json(heros);
+    img_path = path.join(__dirname, '..', 'public','images', 'with_droupout_aug.PNG')
+    res.sendFile(img_path)
+    // res.json(heros);
 }
 
 function getOneHero(req, res){
